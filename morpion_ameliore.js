@@ -1,5 +1,4 @@
-function setup() {
-  createCanvas(660, 660);
+function recommence(){
   background(225);
   {
   fill(102);
@@ -17,20 +16,38 @@ function setup() {
   fill(102);
   rect(210.83, 0, 18.33, 733.33);
   }
-  }
+}
 
+function setup() {
+  createCanvas(660, 660);
+  recommence();
+}
 
 
 var Tableau =[true, true, true, true, true, true, true, true, true]
-if (Tableau == [false, false, false, false, false, false, false, false,false]) {
-  
-}
+
+
 
 var pair = true;
 
 //if pair ==false, pair = true, else pair = fals
 function mousePressed() {
   let taille = (80);
+
+  var test=0;
+for (i=0; i<9; i++){
+  if (Tableau[i]==false){
+    test+=1;
+  }else{
+    test=0;
+  }
+
+    if (test==9){
+      Tableau =[true, true, true, true, true, true, true, true, true];
+      recommence();
+
+    }
+}
 
   if (pmouseX<220 && pmouseY<220 && Tableau[0]==true){
     if (pair == true){
