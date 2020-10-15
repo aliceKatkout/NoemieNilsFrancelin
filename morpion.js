@@ -19,51 +19,53 @@ rect(210.83, 0, 18.33, 733.33);
 }
 }
 var x = 0;
+var Tableau =[true, true, true, true, true, true, true, true, true]
 function mousePressed() {
-let taille = (80);
-x = x+1 ;
-if (x%2 == 0) {
-  if (pmouseX<220 && pmouseY<220) {
-    {
-      fill('red');
-      stroke(0); }
-      strokeWeight(3);
-      ellipse(110, 110, taille);
-     }
-  if (pmouseX<440 && pmouseX>220 && pmouseY<220){
-      fill('red');
-      ellipse(330, 110, taille);
-     }
-   if (pmouseX>440 && pmouseY<220) {
-      fill('red');
-      ellipse(550, 110, taille);
-     }
-        if (pmouseX<220 && pmouseY>220 && pmouseY<440) {
-      fill('red');
-      ellipse(110, 330, taille);
-     }
-        if (pmouseX<220 && pmouseY>440) {
-      fill('red');
-      ellipse(110, 550, taille);
-     }
-        if (pmouseX>220 && pmouseY>440 && pmouseX<440) {
-      fill('red');
-      ellipse(330, 550, taille);
-     }
+  let taille = (80);
+  x = x+1 ;
+    if (x%2 == 0) {
+        if (pmouseX<220 && pmouseY<220 && Tableau[0]==true) {
+          {
+            fill('red');
+            stroke(0); }
+            strokeWeight(3);
+            ellipse(110, 110, taille);
+            Tableau[0]=false;
+          }
+          if (pmouseX<440 && pmouseX>220 && pmouseY<220){
+            fill('red');
+            ellipse(330, 110, taille);
+          }
+          if (pmouseX>440 && pmouseY<220) {
+            fill('red');
+            ellipse(550, 110, taille);
+          }
+          if (pmouseX<220 && pmouseY>220 && pmouseY<440) {
+            fill('red');
+            ellipse(110, 330, taille);
+          }
+          if (pmouseX<220 && pmouseY>440) {
+          fill('red');
+          ellipse(110, 550, taille);
+          }
+          if (pmouseX>220 && pmouseY>440 && pmouseX<440) {
+            fill('red');
+            ellipse(330, 550, taille);
+          }
          if (pmouseX>440 && pmouseY>440) {
-      fill('red');
-      ellipse(550, 550, taille);
-     }
+           fill('red');
+           ellipse(550, 550, taille);
+         }
          if (pmouseX>440 && pmouseY>220 && pmouseY<440) {
-      fill('red');
-      ellipse(550, 330, taille);
-     }
+           fill('red');
+           ellipse(550, 330, taille);
+         }
          if (pmouseX>220 && pmouseY<440 && pmouseX<440) {
            if (pmouseY>220){
-      fill('red');
-      ellipse(330, 330, taille);
+             fill('red');
+             ellipse(330, 330, taille);
            }
-     }
+         }
  }
 
 else   {
@@ -102,7 +104,7 @@ else   {
       square(510, 290, taille);
      }
          if (pmouseX>220 && pmouseY<440 && pmouseX<440) {
-           if (pmouseY>220){
+        if (pmouseY>220){
       fill('blue');
       square(290, 290, taille);
            }
