@@ -127,7 +127,7 @@ if (pmouseX<220 && pmouseY>440 && Tableau[6]==true) {
   Tableau[6]=false;
 }
 
-if (pmouseX<220 && pmouseY>220 && pmouseY<440 && Tableau[7]==true){
+if (pmouseX>220 && pmouseY>440 && pmouseX<440 && Tableau[7]==true){
   if(pair==true){
     fill('red');
     ellipse(110, 330, taille);
@@ -135,7 +135,7 @@ if (pmouseX<220 && pmouseY>220 && pmouseY<440 && Tableau[7]==true){
   }
   else {
     fill('blue');
-    square(70, 290, taille);
+    square(290, 510, taille);
     pair=true;
   }
   Tableau[7]=false;
@@ -153,4 +153,5 @@ if (pmouseX>440 && pmouseY>440 && Tableau[8]==true){
     pair=true;
   }
   Tableau[8]=false;
+}
 }
