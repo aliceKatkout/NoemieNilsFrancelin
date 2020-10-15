@@ -22,6 +22,9 @@ function setup() {
 
 
 var Tableau =[true, true, true, true, true, true, true, true, true]
+if (Tableau == [false, false, false, false, false, false, false, false,false]) {
+  
+}
 
 var pair = true;
 
