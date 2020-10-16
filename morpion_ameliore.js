@@ -150,7 +150,7 @@ if (pmouseX<220 && pmouseY>440 && Tableau[6]==true) {
 if (pmouseX>220 && pmouseY>440 && pmouseX<440 && Tableau[7]==true){
   if(pair==true){
     fill('red');
-    ellipse(110, 330, taille);
+    ellipse(330, 550, taille);
     pair=false;
   }
   else {
